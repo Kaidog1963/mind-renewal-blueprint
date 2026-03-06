@@ -143,13 +143,7 @@ export default function Upsell() {
             Scientifically Proven Strategies That Are About to Change Your Life
             Forever!
           </h1>
-          <p className="text-lg lg:text-xl text-foreground max-w-3xl mx-auto leading-relaxed">
-            <strong>Important:</strong> The Mind Renewal Blueprint goes deep —
-            because you deserve the full truth, backed by real science. But if
-            the sheer volume of life-changing detail feels a little overwhelming
-            at first, don't worry for a single second.{" "}
-            <strong>We built something just for you.</strong>
-          </p>
+
         </div>
       </section>
 
@@ -219,6 +213,19 @@ export default function Upsell() {
               , just waiting for the right conditions to thrive.
             </p>
           </div>
+        </div>
+      </section>
+
+      {/* ── IMPORTANT PARAGRAPH BRIDGE ── */}
+      <section className="py-8 px-4 bg-white">
+        <div className="max-w-3xl mx-auto">
+          <p className="text-lg lg:text-xl text-foreground leading-relaxed">
+            <strong>Important:</strong> The Mind Renewal Blueprint goes deep —
+            because you deserve the full truth, backed by real science. But if
+            the sheer volume of life-changing detail feels a little overwhelming
+            at first, don't worry for a single second.{" "}
+            <strong>We built something just for you.</strong>
+          </p>
         </div>
       </section>
 
