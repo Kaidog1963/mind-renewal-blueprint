@@ -52,44 +52,6 @@ export default function Downsell() {
             You just invested in the Mind Renewal Blueprint — 34 pages of the most powerful, scientifically-backed brain renewal strategies available anywhere. That was a bold, smart decision. And we want to make absolutely sure you succeed with it.
           </p>
 
-          {/* Ebook image */}
-          <div style={{ display: "flex", justifyContent: "center", marginBottom: "40px" }}>
-            <img
-              src={EBOOK_IMG}
-              alt="15-Minute Mind Renewal Quick Track"
-              style={{
-                height: "260px",
-                width: "auto",
-                objectFit: "contain",
-                filter: "drop-shadow(0 12px 32px rgba(201,168,76,0.30))",
-                borderRadius: "8px",
-              }}
-            />
-          </div>
-
-          {/* Price callout */}
-          <div style={{
-            display: "inline-block",
-            backgroundColor: "rgba(255,255,255,0.07)",
-            border: `2px solid ${colors.gold}`,
-            borderRadius: "16px",
-            padding: "28px 48px",
-            marginBottom: "12px",
-          }}>
-            <p style={{ fontSize: "15px", color: colors.gold, fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.1em", marginBottom: "8px" }}>
-              Today Only — One-Time Price
-            </p>
-            <p style={{ fontSize: "18px", color: "#94A3B8", textDecoration: "line-through", marginBottom: "4px" }}>
-              Regular Price: $97.00
-            </p>
-            <p style={{ fontSize: "clamp(42px, 7vw, 64px)", fontWeight: 900, color: colors.white, lineHeight: 1, marginBottom: "8px" }}>
-              $37
-            </p>
-            <p style={{ fontSize: "15px", color: "#94A3B8", margin: 0 }}>
-              You save $60 — 62% off
-            </p>
-          </div>
-
         </div>
       </section>
 
@@ -138,6 +100,46 @@ export default function Downsell() {
             No guesswork. No overwhelm. No "where do I even start?" Just open it, follow the plan, and check the box. That's it.
           </p>
 
+        </div>
+      </section>
+
+      {/* ── EBOOK + PRICE ── */}
+      <section style={{ backgroundColor: colors.white, padding: "48px 20px 0", textAlign: "center" }}>
+        <div style={{ maxWidth: "640px", margin: "0 auto" }}>
+          <div style={{ display: "flex", justifyContent: "center", marginBottom: "32px" }}>
+            <img
+              src={EBOOK_IMG}
+              alt="15-Minute Mind Renewal Quick Track"
+              style={{
+                height: "260px",
+                width: "auto",
+                objectFit: "contain",
+                filter: "drop-shadow(0 12px 32px rgba(15,23,42,0.18))",
+                borderRadius: "8px",
+              }}
+            />
+          </div>
+          <div style={{
+            display: "inline-block",
+            backgroundColor: colors.navy,
+            border: `2px solid ${colors.gold}`,
+            borderRadius: "16px",
+            padding: "28px 48px",
+            marginBottom: "48px",
+          }}>
+            <p style={{ fontSize: "15px", color: colors.gold, fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.1em", marginBottom: "8px" }}>
+              Today Only — One-Time Price
+            </p>
+            <p style={{ fontSize: "18px", color: "#94A3B8", textDecoration: "line-through", marginBottom: "4px" }}>
+              Regular Price: $97.00
+            </p>
+            <p style={{ fontSize: "clamp(42px, 7vw, 64px)", fontWeight: 900, color: colors.white, lineHeight: 1, marginBottom: "8px" }}>
+              $37
+            </p>
+            <p style={{ fontSize: "15px", color: "#94A3B8", margin: 0 }}>
+              You save $60 — 62% off
+            </p>
+          </div>
         </div>
       </section>
 
