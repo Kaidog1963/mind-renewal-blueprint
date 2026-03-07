@@ -7,6 +7,7 @@ import { ThemeProvider } from "./contexts/ThemeContext";
 import Home from "./pages/Home";
 import Upsell from "./pages/Upsell";
 import Upsell2 from "./pages/Upsell2";
+import Downsell from "./pages/Downsell";
 
 
 function Router() {
@@ -15,6 +16,7 @@ function Router() {
       <Route path={"/"} component={Home} />
       <Route path={"/upsell"} component={Upsell} />
       <Route path={"/upsell2"} component={Upsell2} />
+      <Route path={"/downsell"} component={Downsell} />
       <Route path={"/404"} component={NotFound} />
       {/* Final fallback route */}
       <Route component={NotFound} />
