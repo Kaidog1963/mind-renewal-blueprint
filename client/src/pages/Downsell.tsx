@@ -20,7 +20,7 @@ const colors = {
   amazonHover: "#e68a00",
 };
 
-// Amazon-style order button with strikethrough $97 on second line
+// Amazon-style oval order button with 3D pressable shadow
 function OrderButton() {
   return (
     <button
@@ -28,20 +28,33 @@ function OrderButton() {
         backgroundColor: colors.amazon,
         color: colors.navy,
         border: "none",
-        borderRadius: "12px",
-        padding: "18px 48px",
+        borderRadius: "60px",
+        padding: "20px 56px",
         fontSize: "clamp(17px, 2.5vw, 20px)",
         fontWeight: 800,
         cursor: "pointer",
         letterSpacing: "0.01em",
-        boxShadow: "0 6px 24px rgba(255,153,0,0.40)",
+        boxShadow: "0 8px 0px #b36b00, 0 10px 20px rgba(255,153,0,0.45), inset 0 1px 0 rgba(255,255,255,0.25)",
         width: "100%",
-        maxWidth: "480px",
+        maxWidth: "500px",
         lineHeight: 1.4,
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
         gap: "4px",
+        transition: "transform 0.1s ease, box-shadow 0.1s ease",
+      }}
+      onMouseDown={(e) => {
+        (e.currentTarget as HTMLButtonElement).style.transform = "translateY(4px)";
+        (e.currentTarget as HTMLButtonElement).style.boxShadow = "0 4px 0px #b36b00, 0 6px 12px rgba(255,153,0,0.35), inset 0 1px 0 rgba(255,255,255,0.25)";
+      }}
+      onMouseUp={(e) => {
+        (e.currentTarget as HTMLButtonElement).style.transform = "translateY(0)";
+        (e.currentTarget as HTMLButtonElement).style.boxShadow = "0 8px 0px #b36b00, 0 10px 20px rgba(255,153,0,0.45), inset 0 1px 0 rgba(255,255,255,0.25)";
+      }}
+      onMouseLeave={(e) => {
+        (e.currentTarget as HTMLButtonElement).style.transform = "translateY(0)";
+        (e.currentTarget as HTMLButtonElement).style.boxShadow = "0 8px 0px #b36b00, 0 10px 20px rgba(255,153,0,0.45), inset 0 1px 0 rgba(255,255,255,0.25)";
       }}
     >
       <span>Yes! Add The Quick Track For Just $37 →</span>
@@ -147,7 +160,7 @@ export default function Downsell() {
               src={EBOOK_IMG}
               alt="15-Minute Mind Renewal Quick Track"
               style={{
-                height: "340px",
+                height: "420px",
                 width: "auto",
                 objectFit: "contain",
                 filter: "drop-shadow(0 12px 32px rgba(15,23,42,0.18))",
@@ -161,20 +174,20 @@ export default function Downsell() {
             display: "inline-block",
             backgroundColor: colors.navy,
             border: `2px solid ${colors.gold}`,
-            borderRadius: "12px",
-            padding: "16px 36px",
-            marginBottom: "28px",
+            borderRadius: "10px",
+            padding: "10px 28px",
+            marginBottom: "24px",
           }}>
-            <p style={{ fontSize: "13px", color: colors.gold, fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.1em", marginBottom: "4px" }}>
+            <p style={{ fontSize: "11px", color: colors.gold, fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.1em", marginBottom: "2px" }}>
               Today Only — One-Time Price
             </p>
-            <p style={{ fontSize: "15px", color: "#94A3B8", textDecoration: "line-through", marginBottom: "2px" }}>
+            <p style={{ fontSize: "13px", color: "#94A3B8", textDecoration: "line-through", marginBottom: "0px" }}>
               Regular Price: $97.00
             </p>
-            <p style={{ fontSize: "clamp(36px, 6vw, 52px)", fontWeight: 900, color: colors.white, lineHeight: 1, marginBottom: "4px" }}>
+            <p style={{ fontSize: "clamp(28px, 5vw, 40px)", fontWeight: 900, color: colors.white, lineHeight: 1, marginBottom: "2px" }}>
               $37
             </p>
-            <p style={{ fontSize: "13px", color: "#94A3B8", margin: 0 }}>
+            <p style={{ fontSize: "11px", color: "#94A3B8", margin: 0 }}>
               You save $60 — 62% off
             </p>
           </div>
@@ -284,10 +297,10 @@ export default function Downsell() {
               src={EBOOK_IMG}
               alt="15-Minute Mind Renewal Quick Track"
               style={{
-                height: "280px",
+                height: "380px",
                 width: "auto",
                 objectFit: "contain",
-                filter: "drop-shadow(0 8px 24px rgba(0,0,0,0.18))",
+                filter: "drop-shadow(0 10px 28px rgba(0,0,0,0.20))",
                 borderRadius: "8px",
               }}
             />
