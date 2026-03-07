@@ -237,8 +237,8 @@ export default function Upsell2() {
       <section style={{ backgroundColor: "#0A1628", padding: "64px 20px", borderTop: `3px solid ${colors.gold}`, borderBottom: `3px solid ${colors.gold}` }}>
         <div style={{ maxWidth: "760px", margin: "0 auto", textAlign: "center" }}>
 
-          <p style={{ fontSize: "13px", fontWeight: 800, color: colors.gold, letterSpacing: "0.15em", textTransform: "uppercase", marginBottom: "16px" }}>
-            Exclusive Bonus — Included Free With Every Order
+          <p style={{ fontSize: "18px", fontWeight: 800, color: colors.gold, letterSpacing: "0.12em", textTransform: "uppercase", marginBottom: "20px" }}>
+            Exclusive Bonus — Included Free With Any Order Of Methylene Blue!
           </p>
 
           <h2 style={{ fontFamily: "'Playfair Display', Georgia, serif", fontSize: "clamp(24px, 4vw, 36px)", fontWeight: 800, color: colors.white, lineHeight: 1.3, marginBottom: "24px" }}>
