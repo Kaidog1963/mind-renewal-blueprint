@@ -16,15 +16,50 @@ const colors = {
   slate: "#475569",
   charcoal: "#1E293B",
   red: "#DC2626",
+  amazon: "#FF9900",
+  amazonHover: "#e68a00",
 };
+
+// Amazon-style order button with strikethrough $97 on second line
+function OrderButton() {
+  return (
+    <button
+      style={{
+        backgroundColor: colors.amazon,
+        color: colors.navy,
+        border: "none",
+        borderRadius: "12px",
+        padding: "18px 48px",
+        fontSize: "clamp(17px, 2.5vw, 20px)",
+        fontWeight: 800,
+        cursor: "pointer",
+        letterSpacing: "0.01em",
+        boxShadow: "0 6px 24px rgba(255,153,0,0.40)",
+        width: "100%",
+        maxWidth: "480px",
+        lineHeight: 1.4,
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        gap: "4px",
+      }}
+    >
+      <span>Yes! Add The Quick Track For Just $37 →</span>
+      <span style={{ fontSize: "13px", fontWeight: 600, color: colors.navy }}>
+        <span style={{ textDecoration: "line-through", color: colors.red }}>$97</span>
+        {" "}— You Save $60 Today
+      </span>
+    </button>
+  );
+}
 
 export default function Downsell() {
   return (
     <div style={{ fontFamily: "'Inter', sans-serif", backgroundColor: colors.offWhite, color: colors.navy, lineHeight: 1.7 }}>
 
       {/* ── HEADER BANNER ── */}
-      <section style={{ backgroundColor: colors.coral, padding: "18px 20px", textAlign: "center" }}>
-        <p style={{ fontSize: "clamp(14px, 2.5vw, 17px)", fontWeight: 700, color: colors.white, margin: 0, letterSpacing: "0.02em" }}>
+      <section style={{ backgroundColor: colors.coral, padding: "28px 20px", textAlign: "center" }}>
+        <p style={{ fontSize: "clamp(22px, 4vw, 36px)", fontWeight: 900, color: colors.white, margin: 0, letterSpacing: "0.02em", lineHeight: 1.3 }}>
           ⚠️ Wait — Before You Go, We Have One Final Offer Just For You
         </p>
       </section>
@@ -45,7 +80,7 @@ export default function Downsell() {
             lineHeight: 1.25,
             marginBottom: "24px",
           }}>
-            We Hear You — And We Want To Make This As Easy As Possible For You
+            Let Us Make This A Simple, No Brainer, Done For You Solution!
           </h1>
 
           <p style={{ fontSize: "clamp(17px, 2.5vw, 20px)", color: "#CBD5E1", lineHeight: 1.9, marginBottom: "32px", maxWidth: "640px", margin: "0 auto 32px" }}>
@@ -106,12 +141,13 @@ export default function Downsell() {
       {/* ── EBOOK + PRICE ── */}
       <section style={{ backgroundColor: colors.white, padding: "48px 20px 0", textAlign: "center" }}>
         <div style={{ maxWidth: "640px", margin: "0 auto" }}>
+          {/* Bigger cover image */}
           <div style={{ display: "flex", justifyContent: "center", marginBottom: "32px" }}>
             <img
               src={EBOOK_IMG}
               alt="15-Minute Mind Renewal Quick Track"
               style={{
-                height: "260px",
+                height: "340px",
                 width: "auto",
                 objectFit: "contain",
                 filter: "drop-shadow(0 12px 32px rgba(15,23,42,0.18))",
@@ -119,26 +155,33 @@ export default function Downsell() {
               }}
             />
           </div>
+
+          {/* Smaller price box */}
           <div style={{
             display: "inline-block",
             backgroundColor: colors.navy,
             border: `2px solid ${colors.gold}`,
-            borderRadius: "16px",
-            padding: "28px 48px",
-            marginBottom: "48px",
+            borderRadius: "12px",
+            padding: "16px 36px",
+            marginBottom: "28px",
           }}>
-            <p style={{ fontSize: "15px", color: colors.gold, fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.1em", marginBottom: "8px" }}>
+            <p style={{ fontSize: "13px", color: colors.gold, fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.1em", marginBottom: "4px" }}>
               Today Only — One-Time Price
             </p>
-            <p style={{ fontSize: "18px", color: "#94A3B8", textDecoration: "line-through", marginBottom: "4px" }}>
+            <p style={{ fontSize: "15px", color: "#94A3B8", textDecoration: "line-through", marginBottom: "2px" }}>
               Regular Price: $97.00
             </p>
-            <p style={{ fontSize: "clamp(42px, 7vw, 64px)", fontWeight: 900, color: colors.white, lineHeight: 1, marginBottom: "8px" }}>
+            <p style={{ fontSize: "clamp(36px, 6vw, 52px)", fontWeight: 900, color: colors.white, lineHeight: 1, marginBottom: "4px" }}>
               $37
             </p>
-            <p style={{ fontSize: "15px", color: "#94A3B8", margin: 0 }}>
+            <p style={{ fontSize: "13px", color: "#94A3B8", margin: 0 }}>
               You save $60 — 62% off
             </p>
+          </div>
+
+          {/* Order button under price box */}
+          <div style={{ display: "flex", justifyContent: "center", marginBottom: "48px" }}>
+            <OrderButton />
           </div>
         </div>
       </section>
@@ -224,7 +267,7 @@ export default function Downsell() {
                 60-Day "Use It or It's Free" Guarantee
               </p>
               <p style={{ fontSize: "16px", color: colors.slate, lineHeight: 1.9, margin: 0 }}>
-                Use the Quick Track for 60 days. If you don't feel more organized, more consistent, and more in control of your brain health journey — for any reason at all — simply contact us for a complete, no-questions-asked refund. You have absolutely nothing to lose and everything to gain.
+                Use the Quick Track for 60 days. If you don't feel more organized, more consistent, and more in control of your brain health journey — for any reason at all — we'll refund every penny. No questions asked. No hassle. You have nothing to lose and everything to gain.
               </p>
             </div>
           </div>
@@ -235,16 +278,17 @@ export default function Downsell() {
       <section style={{ backgroundColor: colors.offWhite, padding: "64px 20px" }}>
         <div style={{ maxWidth: "640px", margin: "0 auto", textAlign: "center" }}>
 
-          <div style={{ marginBottom: "32px" }}>
+          {/* Bigger, centered cover image */}
+          <div style={{ display: "flex", justifyContent: "center", marginBottom: "32px" }}>
             <img
               src={EBOOK_IMG}
               alt="15-Minute Mind Renewal Quick Track"
               style={{
-                height: "180px",
+                height: "280px",
                 width: "auto",
                 objectFit: "contain",
-                filter: "drop-shadow(0 6px 20px rgba(0,0,0,0.15))",
-                borderRadius: "6px",
+                filter: "drop-shadow(0 8px 24px rgba(0,0,0,0.18))",
+                borderRadius: "8px",
               }}
             />
           </div>
@@ -277,27 +321,10 @@ export default function Downsell() {
             </p>
           </div>
 
-          {/* CTA Button */}
-          <button
-            style={{
-              backgroundColor: colors.coral,
-              color: colors.white,
-              border: "none",
-              borderRadius: "12px",
-              padding: "20px 48px",
-              fontSize: "clamp(17px, 2.5vw, 20px)",
-              fontWeight: 800,
-              cursor: "pointer",
-              letterSpacing: "0.01em",
-              boxShadow: "0 6px 24px rgba(232,135,107,0.40)",
-              width: "100%",
-              maxWidth: "480px",
-              marginBottom: "16px",
-              lineHeight: 1.4,
-            }}
-          >
-            Yes! Add The Quick Track For Just $37 →
-          </button>
+          {/* Amazon-style CTA Button */}
+          <div style={{ display: "flex", justifyContent: "center", marginBottom: "16px" }}>
+            <OrderButton />
+          </div>
 
           <p style={{ fontSize: "13px", color: "#94A3B8", marginBottom: "32px" }}>
             🔒 Secure checkout · Instant digital access · 60-day money-back guarantee
