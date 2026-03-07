@@ -72,14 +72,7 @@ const testimonials = [
     quote:
       "The meal planner and grocery list alone are worth it. No more staring at the fridge wondering what to eat for brain health. My recall is noticeably better already.",
   },
-  {
-    name: "Margaret L.",
-    age: 74,
-    location: "Oregon",
-    stars: 5,
-    quote:
-      "I was skeptical about simplifying 23 supplements, but this stack works. Combined with the daily cheat sheets, I haven't missed a single thing in over a month. Feeling hopeful for the first time in years.",
-  },
+
   {
     name: "James P.",
     age: 70,
@@ -226,11 +219,7 @@ export default function Upsell() {
           <h1 style={{ fontFamily: "'Playfair Display', Georgia, serif", fontSize: "clamp(28px, 5vw, 48px)", fontWeight: 800, color: colors.navy, lineHeight: 1.2, marginBottom: "28px" }}>
             Your Blueprint Is Ready — 34 Jam-Packed Pages of Scientifically Proven Strategies That Are About to Change Your Life Forever!
           </h1>
-          <div style={{ backgroundColor: colors.white, border: `2px solid ${colors.sageMed}`, borderRadius: "12px", padding: "24px 32px", textAlign: "left", maxWidth: "680px", margin: "0 auto" }}>
-            <p style={{ fontSize: "16px", color: colors.charcoal, margin: 0 }}>
-              <strong>Important:</strong> The Mind Renewal Blueprint goes deep — because you deserve the full truth, backed by real science. But if the sheer volume of life-changing detail feels a little overwhelming at first, don't worry for a single second. <strong>We built something just for you.</strong>
-            </p>
-          </div>
+
         </div>
       </section>
 
@@ -287,30 +276,39 @@ export default function Upsell() {
           <p style={{ fontSize: "18px", color: colors.charcoal, marginBottom: "20px" }}>
             Every day you delay is a day your brain misses the neurogenesis window your body is already generating — <strong>700 new neurons daily</strong>, just waiting for the right conditions to thrive.
           </p>
-          <p style={{ fontSize: "18px", color: colors.charcoal, marginBottom: "0" }}>
-            <strong>Important:</strong> The Mind Renewal Blueprint goes deep — because you deserve the full truth, backed by real science. But if the sheer volume of life-changing detail feels a little overwhelming at first, don't worry for a single second. <strong>We built something just for you.</strong>
-          </p>
+
         </div>
       </section>
 
       {/* ── SOLUTION INTRODUCTION ── */}
-      <section style={{ backgroundColor: colors.navy, padding: "72px 20px", textAlign: "center" }}>
-        <div style={{ maxWidth: "800px", margin: "0 auto" }}>
-          <p style={{ fontSize: "18px", color: colors.sageMed, fontWeight: 600, marginBottom: "16px", letterSpacing: "0.05em", textTransform: "uppercase" }}>
-            That is exactly why we created this:
-          </p>
-          <h2 style={{ fontFamily: "'Playfair Display', Georgia, serif", fontSize: "clamp(26px, 4.5vw, 42px)", fontWeight: 800, color: colors.white, lineHeight: 1.25, marginBottom: "20px" }}>
-            Introducing the 15-Minute Mind Renewal Quick Track System
-          </h2>
-          <p style={{ fontSize: "19px", color: colors.skyBlueMed, fontStyle: "italic", marginBottom: "28px" }}>
-            The "Done-For-You" Daily Roadmap That Turns the Entire Blueprint Into a Simple, Foolproof Routine You Can Start Tomorrow Morning
-          </p>
-          <p style={{ fontSize: "17px", color: "#CBD5E1", maxWidth: "680px", margin: "0 auto" }}>
-            This is not more information. This is your <strong style={{ color: colors.white }}>personal implementation system</strong> — a senior-friendly, step-by-step daily guide that takes every single decision off your plate and tells you exactly what to do, when to do it, and how to track your progress so you see real improvements fast.
-          </p>
-          <p style={{ fontSize: "17px", color: colors.sageMed, fontWeight: 600, marginTop: "24px" }}>
-            No guesswork. No overwhelm. No "where do I start?" Just simple, consistent action from Day 1.
-          </p>
+      <section style={{ backgroundColor: colors.navy, padding: "72px 20px" }}>
+        <div style={{ maxWidth: "900px", margin: "0 auto", display: "flex", alignItems: "center", gap: "48px", flexWrap: "wrap" }}>
+          {/* Text — left side */}
+          <div style={{ flex: "1 1 400px", textAlign: "left" }}>
+            <p style={{ fontSize: "18px", color: colors.sageMed, fontWeight: 600, marginBottom: "16px", letterSpacing: "0.05em", textTransform: "uppercase" }}>
+              That is exactly why we created this:
+            </p>
+            <h2 style={{ fontFamily: "'Playfair Display', Georgia, serif", fontSize: "clamp(26px, 4.5vw, 42px)", fontWeight: 800, color: colors.white, lineHeight: 1.25, marginBottom: "20px" }}>
+              Introducing the 15-Minute Mind Renewal Quick Track System
+            </h2>
+            <p style={{ fontSize: "19px", color: colors.skyBlueMed, fontStyle: "italic", marginBottom: "28px" }}>
+              The "Done-For-You" Daily Roadmap That Turns the Entire Blueprint Into a Simple, Foolproof Routine You Can Start Tomorrow Morning
+            </p>
+            <p style={{ fontSize: "17px", color: "#CBD5E1", marginBottom: "16px" }}>
+              This is not more information. This is your <strong style={{ color: colors.white }}>personal implementation system</strong> — a senior-friendly, step-by-step daily guide that takes every single decision off your plate and tells you exactly what to do, when to do it, and how to track your progress so you see real improvements fast.
+            </p>
+            <p style={{ fontSize: "17px", color: colors.sageMed, fontWeight: 600, margin: 0 }}>
+              No guesswork. No overwhelm. No "where do I start?" Just simple, consistent action from Day 1.
+            </p>
+          </div>
+          {/* Ebook image — right side */}
+          <div style={{ flex: "0 0 220px", display: "flex", justifyContent: "center", alignItems: "center" }}>
+            <img
+              src="/images/quicktrack-ebook.jpg"
+              alt="15-Minute Mind Renewal Quick Track System"
+              style={{ width: "200px", height: "auto", borderRadius: "12px", boxShadow: "0 8px 32px rgba(0,0,0,0.35)", border: `3px solid ${colors.sageMed}` }}
+            />
+          </div>
         </div>
       </section>
 
@@ -351,7 +349,7 @@ export default function Upsell() {
           <p style={{ fontSize: "17px", marginBottom: "16px", textAlign: "left" }}>
             The Mind Renewal Blueprint identifies <strong>23 specific nutrients</strong> that the world's leading dementia researchers have proven are essential for reversing cognitive decline at the cellular level.
           </p>
-          <p style={{ fontSize: "22px", fontWeight: 800, color: colors.coral, textAlign: "center", margin: "24px 0" }}>
+          <p style={{ fontSize: "22px", fontWeight: 800, color: colors.navy, textAlign: "center", margin: "24px 0" }}>
             Twenty-three.
           </p>
           <p style={{ fontSize: "17px", marginBottom: "20px", textAlign: "left" }}>
