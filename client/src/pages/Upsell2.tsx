@@ -233,6 +233,57 @@ export default function Upsell2() {
         </div>
       </section>
 
+      {/* ── QUICK TRACK BONUS SECTION ── */}
+      <section style={{ backgroundColor: "#0A1628", padding: "64px 20px", borderTop: `3px solid ${colors.gold}`, borderBottom: `3px solid ${colors.gold}` }}>
+        <div style={{ maxWidth: "760px", margin: "0 auto", textAlign: "center" }}>
+
+          <p style={{ fontSize: "13px", fontWeight: 800, color: colors.gold, letterSpacing: "0.15em", textTransform: "uppercase", marginBottom: "16px" }}>
+            Exclusive Bonus — Included Free With Every Order
+          </p>
+
+          <h2 style={{ fontFamily: "'Playfair Display', Georgia, serif", fontSize: "clamp(24px, 4vw, 36px)", fontWeight: 800, color: colors.white, lineHeight: 1.3, marginBottom: "24px" }}>
+            You Also Get The 15-Minute Mind Renewal Quick Track System — Absolutely Free
+          </h2>
+
+          <div style={{ display: "flex", justifyContent: "center", marginBottom: "32px" }}>
+            <img
+              src="/images/quicktrack-ebook.jpg"
+              alt="15-Minute Mind Renewal Quick Track"
+              style={{ height: "200px", width: "auto", objectFit: "contain", filter: "drop-shadow(0 8px 24px rgba(201,168,76,0.35))" }}
+              onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }}
+            />
+          </div>
+
+          <p style={{ fontSize: "18px", color: "#CBD5E1", lineHeight: 1.9, marginBottom: "24px", maxWidth: "640px", margin: "0 auto 24px" }}>
+            Most people who start a brain health protocol quit within the first two weeks — not because it doesn't work, but because life gets in the way and they don't know exactly what to do each day.
+          </p>
+
+          <p style={{ fontSize: "18px", color: "#CBD5E1", lineHeight: 1.9, marginBottom: "24px", maxWidth: "640px", margin: "0 auto 24px" }}>
+            The Quick Track eliminates that problem entirely. It's a <strong style={{ color: colors.white }}>done-for-you daily implementation system</strong> — pre-planned 15-minute sessions, printable checklists, daily action charts, and a grocery list — so you never have to think about what to do next. You just follow the plan.
+          </p>
+
+          <p style={{ fontSize: "18px", color: "#CBD5E1", lineHeight: 1.9, marginBottom: "36px", maxWidth: "640px", margin: "0 auto 36px" }}>
+            Combined with pharmaceutical-grade Methylene Blue, this is the most complete, most powerful brain renewal system we have ever put together. The Blueprint gives you the science. The Methylene Blue fuels your mitochondria. And the Quick Track makes sure you actually do it — <strong style={{ color: colors.gold }}>every single day, without fail.</strong>
+          </p>
+
+          <div style={{ display: "inline-block", backgroundColor: "rgba(201,168,76,0.12)", border: `2px solid ${colors.gold}`, borderRadius: "16px", padding: "28px 40px" }}>
+            <p style={{ fontSize: "15px", color: colors.gold, fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.08em", marginBottom: "8px" }}>
+              Retail Value
+            </p>
+            <p style={{ fontSize: "clamp(36px, 6vw, 52px)", fontWeight: 900, color: colors.white, lineHeight: 1, marginBottom: "8px", textDecoration: "line-through", opacity: 0.5 }}>
+              $97.00
+            </p>
+            <p style={{ fontSize: "clamp(28px, 5vw, 42px)", fontWeight: 900, color: colors.gold, lineHeight: 1, marginBottom: "12px" }}>
+              FREE
+            </p>
+            <p style={{ fontSize: "15px", color: "#94A3B8", margin: 0 }}>
+              Automatically included with any Methylene Blue order today
+            </p>
+          </div>
+
+        </div>
+      </section>
+
       {/* ── PRICING SECTION ── */}
       <section style={{ backgroundColor: colors.offWhite, padding: "64px 20px" }}>
         <div style={{ maxWidth: "720px", margin: "0 auto" }}>
