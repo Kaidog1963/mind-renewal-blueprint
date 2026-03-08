@@ -8,6 +8,7 @@ import Home from "./pages/Home";
 import Upsell from "./pages/Upsell";
 import Upsell2 from "./pages/Upsell2";
 import Downsell from "./pages/Downsell";
+import ThankYou from "./pages/ThankYou";
 
 
 function Router() {
@@ -17,6 +18,7 @@ function Router() {
       <Route path={"/upsell"} component={Upsell} />
       <Route path={"/upsell2"} component={Upsell2} />
       <Route path={"/downsell"} component={Downsell} />
+      <Route path={"/thank-you"} component={ThankYou} />
       <Route path={"/404"} component={NotFound} />
       {/* Final fallback route */}
       <Route component={NotFound} />
